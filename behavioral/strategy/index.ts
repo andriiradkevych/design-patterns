@@ -1,7 +1,7 @@
-type TSort = number[];
+type TSortArray = number[];
 
 interface ISortingStraregy {
-  sort: (arr: TSort) => void;
+  sort: (arr: TSortArray) => void;
 }
 
 class Sorting {
@@ -15,25 +15,25 @@ class Sorting {
     this.sortingStrategy = sortingStrategy;
   }
 
-  sort(arr: TSort) {
+  sort(arr: TSortArray) {
     this.sortingStrategy.sort(arr);
   }
 }
 
 class BubbleSortStrategy implements ISortingStraregy {
-  sort(arr: TSort) {
+  sort(arr: TSortArray) {
     console.log(arr, "Bubble sort");
   }
 }
 
 class MergeSortStrategy implements ISortingStraregy {
-  sort(arr: TSort) {
+  sort(arr: TSortArray) {
     console.log(arr, "Merge sort");
   }
 }
 
 class QuickSortStrategy implements ISortingStraregy {
-  sort(arr: TSort) {
+  sort(arr: TSortArray) {
     console.log(arr, "Quick sort");
   }
 }
